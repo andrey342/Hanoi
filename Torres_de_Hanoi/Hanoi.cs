@@ -121,7 +121,7 @@ namespace Torres_de_Hanoi
                 }
             }
             return movimientos;
-        }s
+        }
 
     }
 }
