@@ -123,5 +123,27 @@ namespace Torres_de_Hanoi
             return movimientos;
         }
 
+        public int movimientos; //la var la creo fuera porque la funcion se llama a si misma 
+        public int recursivo(int n, Pila ini, Pila fin, Pila aux)
+        {
+
+            if (n.Equals(1))
+            {
+                movimientos++;
+                mover_disco(ini, fin);
+                Console.WriteLine("Mover de ini a fin");
+
+            }
+            else
+            {
+                recursivo(n - 1, ini, aux, fin);
+                movimientos++;
+                mover_disco(ini, fin);
+                Console.WriteLine("Mover de ini a fin");
+                recursivo(n - 1, aux, fin, ini);
+            }
+            return movimientos;
+        }
+
     }
 }
