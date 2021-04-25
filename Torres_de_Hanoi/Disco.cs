@@ -9,10 +9,18 @@ namespace Torres_de_Hanoi
     class Disco
     {
         /*TODO: 
-        Decidir tipo de Valor
-        public int Valor { get; set; }
-        public String Valor { get; set; }
-        */
+         Decidir tipo de Valor
+         public int Valor { get; set; }
+         public String Valor { get; set; }
+         */
+
+        //param
+        public int Tamanyo { get; set; } //getter & setter
+        //constructor
+        public Disco(int tamanyo)
+        {
+            Tamanyo = tamanyo;
+        }
 
     }
 }
